@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "zhenai_",
+  "version": "0.1.0",
+  "name": "where it",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "./icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "work.zhenai.Main"
+    ]
+  },
+  "mixins": [
+    "zhenai.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.14",
+    "fabric": "*",
+    "minecraft": "1.18.2"
+  }
+}
