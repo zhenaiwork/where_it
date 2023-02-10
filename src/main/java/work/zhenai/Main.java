@@ -8,7 +8,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import work.zhenai.commands.whereCommand;
-
+import work.zhenai.commands.makeCommand;
+import work.zhenai.commands.removecommand;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
@@ -17,9 +18,17 @@ public class Main implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        //LOGGER.info("Hello Fabric world! ~~~~~~~~~~~~");
+        // LOGGER.info("Hello Fabric world! ~~~~~~~~~~~~");
         CommandRegistrationCallback.EVENT.register(
                 (dispatcher, dedicated) -> whereCommand.where(dispatcher)
+        );
+
+        CommandRegistrationCallback.EVENT.register(
+                (dispatcher, dedicated) -> makeCommand.make(dispatcher)
+        );
+
+        CommandRegistrationCallback.EVENT.register(
+                (dispatcher, dedicated) -> removecommand.remove(dispatcher)
         );
 
     }

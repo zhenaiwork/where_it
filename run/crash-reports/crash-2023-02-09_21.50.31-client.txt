@@ -1,0 +1,141 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 2023/2/9 下午9:50
+Description: Initializing game
+
+java.lang.RuntimeException: Could not execute entrypoint stage 'client' due to errors, provided by 'zhenai'!
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.lambda$invoke0$0(EntrypointUtils.java:51)
+	at net.fabricmc.loader.impl.util.ExceptionUtil.gatherExceptions(ExceptionUtil.java:33)
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:49)
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke(EntrypointUtils.java:35)
+	at net.fabricmc.loader.impl.game.minecraft.Hooks.startClient(Hooks.java:53)
+	at net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:452)
+	at net.minecraft.client.main.Main.main(Main.java:197)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:461)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+Caused by: net.fabricmc.loader.api.EntrypointException: Exception while loading entries for entrypoint 'client' provided by 'zhenai'
+	at net.fabricmc.loader.impl.entrypoint.EntrypointContainerImpl.getEntrypoint(EntrypointContainerImpl.java:56)
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:47)
+	... 8 more
+Caused by: net.fabricmc.loader.api.LanguageAdapterException: Class work.zhenai.Main cannot be cast to net.fabricmc.api.ClientModInitializer!
+	at net.fabricmc.loader.impl.util.DefaultLanguageAdapter.create(DefaultLanguageAdapter.java:63)
+	at net.fabricmc.loader.impl.entrypoint.EntrypointStorage$NewEntry.getOrCreate(EntrypointStorage.java:117)
+	at net.fabricmc.loader.impl.entrypoint.EntrypointContainerImpl.getEntrypoint(EntrypointContainerImpl.java:53)
+	... 9 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.lambda$invoke0$0(EntrypointUtils.java:51)
+	at net.fabricmc.loader.impl.util.ExceptionUtil.gatherExceptions(ExceptionUtil.java:33)
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke0(EntrypointUtils.java:49)
+	at net.fabricmc.loader.impl.entrypoint.EntrypointUtils.invoke(EntrypointUtils.java:35)
+	at net.fabricmc.loader.impl.game.minecraft.Hooks.startClient(Hooks.java:53)
+	at net.minecraft.client.MinecraftClient.<init>(MinecraftClient.java:452)
+
+-- Initialization --
+Details:
+	Modules: 
+Stacktrace:
+	at net.minecraft.client.main.Main.main(Main.java:197)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:461)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.18.2
+	Minecraft Version ID: 1.18.2
+	Operating System: Linux (amd64) version 5.15.0-58-generic
+	Java Version: 17.0.5, Private Build
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Private Build
+	Memory: 1649437576 bytes (1573 MiB) / 2424307712 bytes (2312 MiB) up to 8392802304 bytes (8004 MiB)
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 5800X 8-Core Processor
+	Identifier: AuthenticAMD Family 25 Model 33 Stepping 0
+	Microarchitecture: Zen 3
+	Frequency (GHz): 4.85
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: GP107 [GeForce GTX 1050 Ti]
+	Graphics card #0 vendor: NVIDIA Corporation (0x10de)
+	Graphics card #0 VRAM (MB): 288.00
+	Graphics card #0 deviceId: 0x1c82
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 18049.44
+	Virtual memory used (MB): 16213.92
+	Swap memory total (MB): 2048.00
+	Swap memory used (MB): 0.25
+	JVM Flags: 0 total; 
+	Fabric Mods: 
+		fabric-api: Fabric API 0.67.1+1.18.2
+		fabric-api-base: Fabric API Base 0.4.5+64b7c69360
+		fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.6.3+2373a54560
+		fabric-biome-api-v1: Fabric Biome API (v1) 8.0.6+651bcc5960
+		fabric-block-api-v1: Fabric Block API (v1) 1.0.0+ee3621fc60
+		fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 1.1.13+3ac43d9560
+		fabric-command-api-v1: Fabric Command API (v1) 1.1.10+d7c144a860
+		fabric-commands-v0: Fabric Commands (v0) 0.2.9+b4f4f6cd60
+		fabric-containers-v0: Fabric Containers (v0) 0.1.24+d7c144a860
+		fabric-content-registries-v0: Fabric Content Registries (v0) 3.1.2+c85f2e3860
+		fabric-convention-tags-v1: Fabric Convention Tags 1.0.2+474e4f7960
+		fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.2.1+ee261a3e60
+		fabric-data-generation-api-v1: Fabric Data Generation API (v1) 3.0.3+9fcb91d260
+		fabric-dimensions-v1: Fabric Dimensions API (v1) 2.1.21+489d6f8260
+		fabric-entity-events-v1: Fabric Entity Events (v1) 1.4.9+d7c144a860
+		fabric-events-interaction-v0: Fabric Events Interaction (v0) 0.4.20+d7c144a860
+		fabric-events-lifecycle-v0: Fabric Events Lifecycle (v0) 0.2.21+d7c144a860
+		fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.13+d7c144a860
+		fabric-gametest-api-v1: Fabric Game Test API (v1) 1.0.20+91b7aa6660
+		fabric-item-api-v1: Fabric Item API (v1) 1.6.1+a6f01b2660
+		fabric-item-groups-v0: Fabric Item Groups (v0) 0.3.15+91896a4960
+		fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.12+54e5b2ec60
+		fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.10+b4f4f6cd60
+		fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 2.1.1+cc71601c60
+		fabric-loot-api-v2: Fabric Loot API (v2) 1.1.1+1997ad1260
+		fabric-loot-tables-v1: Fabric Loot Tables (v1) 1.1.3+e747827960
+		fabric-mining-level-api-v1: Fabric Mining Level API (v1) 2.1.5+cc71601c60
+		fabric-models-v0: Fabric Models (v0) 0.3.7+d7c144a860
+		fabric-networking-api-v1: Fabric Networking API (v1) 1.0.24+2d30af4b60
+		fabric-networking-v0: Fabric Networking (v0) 0.3.11+b4f4f6cd60
+		fabric-object-builder-api-v1: Fabric Object Builder API (v1) 2.1.4+032c981d60
+		fabric-particles-v1: Fabric Particles (v1) 0.2.13+526dc1ac60
+		fabric-registry-sync-v0: Fabric Registry Sync (v0) 0.9.12+bb2e047760
+		fabric-renderer-api-v1: Fabric Renderer API (v1) 0.4.16+ee3621fc60
+		fabric-renderer-indigo: Fabric Renderer - Indigo 0.5.6+41a02c8a60
+		fabric-renderer-registries-v1: Fabric Renderer Registries (v1) 3.2.12+b4f4f6cd60
+		fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.3.9+ee3621fc60
+		fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 2.0.3+54e5b2ec60
+		fabric-rendering-v0: Fabric Rendering (v0) 1.1.14+b4f4f6cd60
+		fabric-rendering-v1: Fabric Rendering (v1) 1.10.8+54e5b2ec60
+		fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 2.0.3+91b7aa6660
+		fabric-resource-loader-v0: Fabric Resource Loader (v0) 0.5.2+446e059560
+		fabric-screen-api-v1: Fabric Screen API (v1) 1.0.11+d882b91560
+		fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.2.3+1f6558e860
+		fabric-textures-v0: Fabric Textures (v0) 1.0.13+3ac43d9560
+		fabric-transfer-api-v1: Fabric Transfer API (v1) 1.6.4+f4563ac860
+		fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 1.1.0+e747827960
+		fabricloader: Fabric Loader 0.14.14
+		java: OpenJDK 64-Bit Server VM 17
+		minecraft: Minecraft 1.18.2
+		zhenai: where it 1.0
+	Launched Version: Fabric
+	Backend library: LWJGL version 3.2.2 build 10
+	Backend API: Unknown
+	Window size: <not initialized>
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: <disabled>
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fabric'
+	Type: Client (map_client.txt)
+	CPU: <unknown>
