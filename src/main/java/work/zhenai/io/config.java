@@ -17,15 +17,18 @@ public class config {
     static String url =  "config/config.yml";
 
     public static int getconfig(PlayerEntity player){
-
-            try {
-                String read = Files.readString(Paths.get(url.toString()));
-                player.sendMessage(new LiteralText(read), false);
-
-            } catch (IOException e) {
-                player.sendMessage(new LiteralText("获取文件失败 -- IOException"), false);
+        int slot = 0;
+        try {
+            File file = new File(url);
+            int line = readLine.getTotalLines(file);
+            while (slot < line) {
+                String readSlot = readLine.readAppointedLineNumber(file, slot);
+                player.sendMessage(new LiteralText((readSlot)), false);
             }
 
+        } catch (IOException e) {
+            player.sendMessage(new LiteralText("获取文件失败 -- IOException"), false);
+        }
         return 0;
     }
 
