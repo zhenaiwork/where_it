@@ -22,6 +22,7 @@ public class config {
             File file = new File(url);
             int line = readLine.getTotalLines(file);
             while (slot < line) {
+                slot++;
                 String readSlot = readLine.readAppointedLineNumber(file, slot);
                 player.sendMessage(new LiteralText((readSlot)), false);
             }
