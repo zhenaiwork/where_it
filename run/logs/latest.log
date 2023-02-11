@@ -1,5 +1,5 @@
-[01:02:35] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.18.2 with Fabric Loader 0.14.14
-[01:02:35] [main/INFO] (FabricLoader) Loading 40 mods:
+[01:31:34] [main/INFO] (FabricLoader/GameProvider) Loading Minecraft 1.18.2 with Fabric Loader 0.14.14
+[01:31:35] [main/INFO] (FabricLoader) Loading 40 mods:
 	- fabric-api 0.67.1+1.18.2
 	- fabric-api-base 0.4.5+64b7c69360
 	- fabric-api-lookup-api-v1 1.6.3+2373a54560
@@ -40,45 +40,46 @@
 	- java 17
 	- minecraft 1.18.2
 	- zhenai_ 0.1.0
-[01:02:36] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/zhenai/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.11.4+mixin.0.8.5/c1dc27696aa4006e492c2485c9ccbcb26045a971/sponge-mixin-0.11.4+mixin.0.8.5.jar Service=Knot/Fabric Env=SERVER
-[01:02:36] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
-[01:02:36] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
-[01:02:36] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
-[01:02:40] [main/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[01:02:45] [main/WARN] (Minecraft) Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[01:02:45] [main/WARN] (Minecraft) Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[01:02:45] [main/WARN] (Minecraft) Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[01:02:45] [main/WARN] (Minecraft) Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[01:02:45] [main/WARN] (Minecraft) Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[01:02:45] [Worker-Main-27/INFO] (Minecraft) Loaded 7 recipes
-[01:02:46] [Worker-Main-27/INFO] (Minecraft) Loaded 1141 advancements
-[01:02:48] [main/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 61 new biomes in 9.557 ms
-[01:02:48] [Server thread/INFO] (Minecraft) Starting minecraft server version 1.18.2
-[01:02:48] [Server thread/INFO] (Minecraft) Loading properties
-[01:02:48] [Server thread/INFO] (Minecraft) Default game type: SURVIVAL
-[01:02:48] [Server thread/INFO] (Minecraft) Generating keypair
-[01:02:48] [Server thread/INFO] (Minecraft) Starting Minecraft server on *:22333
-[01:02:48] [Server thread/INFO] (Minecraft) Using epoll channel type
-[01:02:49] [Server thread/INFO] (Minecraft) Preparing level "world"
-[01:02:49] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
-[01:02:50] [Worker-Main-21/INFO] (Minecraft) Preparing spawn area: 0%
-[01:02:50] [Worker-Main-29/INFO] (Minecraft) Preparing spawn area: 0%
-[01:02:50] [Worker-Main-18/INFO] (Minecraft) Preparing spawn area: 0%
-[01:02:51] [Worker-Main-29/INFO] (Minecraft) Preparing spawn area: 0%
-[01:02:51] [Worker-Main-20/INFO] (Minecraft) Preparing spawn area: 0%
-[01:02:51] [Worker-Main-28/INFO] (Minecraft) Preparing spawn area: 0%
-[01:02:52] [Worker-Main-16/INFO] (Minecraft) Preparing spawn area: 0%
-[01:02:52] [Worker-Main-28/INFO] (Minecraft) Preparing spawn area: 0%
-[01:02:53] [Worker-Main-30/INFO] (Minecraft) Preparing spawn area: 0%
-[01:02:53] [User Authenticator #1/INFO] (Minecraft) UUID of player zhenai_ is d8162b17-392e-4a64-baeb-53adab683f0e
-[01:02:53] [Worker-Main-25/INFO] (Minecraft) Preparing spawn area: 0%
-[01:02:54] [Worker-Main-17/INFO] (Minecraft) Preparing spawn area: 0%
-[01:02:54] [Worker-Main-24/INFO] (Minecraft) Preparing spawn area: 0%
-[01:02:55] [Worker-Main-19/INFO] (Minecraft) Preparing spawn area: 42%
-[01:02:55] [Server thread/INFO] (Minecraft) Time elapsed: 6318 ms
-[01:02:55] [Server thread/INFO] (Minecraft) Done (6.697s)! For help, type "help"
-[01:02:55] [Server thread/INFO] (Minecraft) zhenai_[/127.0.0.1:57086] logged in with entity id 124 at (-222.65145919752314, 75.61650136792812, -248.45800379051133)
-[01:02:55] [Server thread/INFO] (Minecraft) zhenai_ joined the game
-[01:03:55] [Server thread/INFO] (Minecraft) Villager VillagerEntity['Nitwit'/122, l='ServerLevel[world]', x=-252.70, y=68.00, z=-341.30] died, message: 'Nitwit was slain by Husk'
-[01:04:02] [Server thread/INFO] (Minecraft) Villager VillagerEntity['Villager'/121, l='ServerLevel[world]', x=-252.30, y=68.00, z=-341.70] died, message: 'Villager was slain by Husk'
-[01:04:13] [Server thread/INFO] (Minecraft) <zhenai_> ++++++++++++++++++++++
+[01:31:35] [main/INFO] (FabricLoader/Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/home/zhenai/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.11.4+mixin.0.8.5/c1dc27696aa4006e492c2485c9ccbcb26045a971/sponge-mixin-0.11.4+mixin.0.8.5.jar Service=Knot/Fabric Env=SERVER
+[01:31:35] [main/INFO] (FabricLoader/Mixin) Loaded Fabric development mappings for mixin remapper!
+[01:31:35] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_16
+[01:31:35] [main/INFO] (FabricLoader/Mixin) Compatibility level set to JAVA_17
+[01:31:39] [main/INFO] (Minecraft) Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[01:31:44] [main/WARN] (Minecraft) Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[01:31:44] [main/WARN] (Minecraft) Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[01:31:44] [main/WARN] (Minecraft) Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[01:31:44] [main/WARN] (Minecraft) Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[01:31:44] [main/WARN] (Minecraft) Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[01:31:45] [Worker-Main-26/INFO] (Minecraft) Loaded 7 recipes
+[01:31:45] [Worker-Main-26/INFO] (Minecraft) Loaded 1141 advancements
+[01:31:48] [main/INFO] (BiomeModificationImpl) Applied 0 biome modifications to 0 of 61 new biomes in 3.420 ms
+[01:31:48] [Server thread/INFO] (Minecraft) Starting minecraft server version 1.18.2
+[01:31:48] [Server thread/INFO] (Minecraft) Loading properties
+[01:31:48] [Server thread/INFO] (Minecraft) Default game type: SURVIVAL
+[01:31:48] [Server thread/INFO] (Minecraft) Generating keypair
+[01:31:48] [Server thread/INFO] (Minecraft) Starting Minecraft server on *:22333
+[01:31:48] [Server thread/INFO] (Minecraft) Using epoll channel type
+[01:31:49] [Server thread/INFO] (Minecraft) Preparing level "world"
+[01:31:49] [Server thread/INFO] (Minecraft) Preparing start region for dimension minecraft:overworld
+[01:31:50] [Worker-Main-29/INFO] (Minecraft) Preparing spawn area: 0%
+[01:31:51] [Worker-Main-27/INFO] (Minecraft) Preparing spawn area: 0%
+[01:31:51] [Worker-Main-29/INFO] (Minecraft) Preparing spawn area: 0%
+[01:31:51] [Worker-Main-29/INFO] (Minecraft) Preparing spawn area: 0%
+[01:31:51] [Worker-Main-27/INFO] (Minecraft) Preparing spawn area: 0%
+[01:31:51] [Worker-Main-17/INFO] (Minecraft) Preparing spawn area: 0%
+[01:31:52] [Worker-Main-17/INFO] (Minecraft) Preparing spawn area: 0%
+[01:31:52] [Worker-Main-28/INFO] (Minecraft) Preparing spawn area: 0%
+[01:31:53] [Worker-Main-16/INFO] (Minecraft) Preparing spawn area: 0%
+[01:31:53] [Worker-Main-23/INFO] (Minecraft) Preparing spawn area: 0%
+[01:31:54] [Worker-Main-22/INFO] (Minecraft) Preparing spawn area: 1%
+[01:31:54] [Worker-Main-18/INFO] (Minecraft) Preparing spawn area: 4%
+[01:31:55] [Worker-Main-24/INFO] (Minecraft) Preparing spawn area: 4%
+[01:31:55] [Worker-Main-25/INFO] (Minecraft) Preparing spawn area: 9%
+[01:31:56] [Worker-Main-29/INFO] (Minecraft) Preparing spawn area: 48%
+[01:31:56] [Server thread/INFO] (Minecraft) Time elapsed: 7564 ms
+[01:31:56] [Server thread/INFO] (Minecraft) Done (7.792s)! For help, type "help"
+[01:32:00] [User Authenticator #1/INFO] (Minecraft) UUID of player zhenai_ is d8162b17-392e-4a64-baeb-53adab683f0e
+[01:32:00] [Server thread/INFO] (Minecraft) zhenai_[/127.0.0.1:42254] logged in with entity id 174 at (-182.3772350612264, 99.35717105899208, -220.70002078507696)
+[01:32:00] [Server thread/INFO] (Minecraft) zhenai_ joined the game
+[01:33:43] [Server thread/INFO] (Minecraft) zhenai_ lost connection: Disconnected
+[01:33:43] [Server thread/INFO] (Minecraft) zhenai_ left the game

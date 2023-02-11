@@ -6,7 +6,7 @@
   "description": "",
   "authors": [],
   "contact": {},
-  "license": "MIT",
+  "license": "GPL-v3",
   "icon": "./icon.png",
   "environment": "*",
   "entrypoints": {

@@ -2,19 +2,16 @@ package work.zhenai.io;
 
 
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.LiteralText;
-import org.lwjgl.system.CallbackI;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.*;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+
+import work.zhenai.io.removeLine;
+
+
 
 public class config {
     static String url =  "config/config.yml";
@@ -32,20 +29,22 @@ public class config {
             }
         }if (slot > 0){
             try {
-                String list = String.valueOf(Files.readAllLines(Paths.get(url.toString())));
-                player.sendMessage(new LiteralText(list),false);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+                File file = new File(url);
+                String readSlot = readLine.readAppointedLineNumber(file, slot);
+                String indXZ = readSlot.substring(readSlot.indexOf("[") - 1 ,readSlot.indexOf(",")) + ", 128, " +
+                        readSlot.substring(readSlot.indexOf(",") + 1 , readSlot.indexOf("]") + 1);
+                player.sendMessage(new LiteralText((indXZ)), false);
 
-            player.sendMessage(new LiteralText(String.valueOf(slot)), false);
+            } catch (IOException e) {
+                player.sendMessage(new LiteralText("获取文件失败 -- IOException"), false);
+            }
         }
         return 0;
     }
 
 
     public static int writeconfig(String name, int x ,int z , PlayerEntity player){
-        String write = "\n" + name + ": {" + String.valueOf(x) + ", " + String.valueOf(z)+ "}";
+        String write = name + ": [" + String.valueOf(x) + ", " + String.valueOf(z)+ "]\n";
         try {
            Files.writeString(Paths.get(url), write , StandardOpenOption.APPEND);
         } catch (IOException e) {
@@ -53,8 +52,12 @@ public class config {
         }
         return 0;
     }
-    public static int remove(int slot, PlayerEntity player){
-        player.sendMessage(new LiteralText("不做了"), false);
+    public static int remove(PlayerEntity player){
+        try {
+            removeLine.remove(url);
+        } catch (IOException e) {
+            player.sendMessage(new LiteralText("删除失败 -- IOException"), false);
+        }
 
         return 0;
     }
