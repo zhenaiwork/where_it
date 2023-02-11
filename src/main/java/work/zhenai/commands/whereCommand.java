@@ -13,12 +13,10 @@ import work.zhenai.io.config;
 public class whereCommand {
     public static void where(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(literal("where").executes( c -> help(c.getSource().getPlayer())));
-        dispatcher.register(literal("where").then(literal("it_all").executes(c -> config.getconfig(0, c.getSource().getPlayer()))));
-        dispatcher.register(literal("where").then(literal("it").then(argument("slot" ,IntegerArgumentType.integer())
-                .executes( c ->config.getconfig(IntegerArgumentType.getInteger(c, "slot"), c.getSource().getPlayer())))));
+        dispatcher.register(literal("where").then(literal("it_all").executes(c -> config.getconfig(c.getSource().getPlayer()))));
     }
     private static int help(PlayerEntity player){
-        player.sendMessage(new LiteralText("it_all 查看所有坐标\nit + 数字查看单个坐标（可以快捷标点）"), false);
+        player.sendMessage(new LiteralText("it_all 查看所有坐标"), false);
         return 0;
     }
 
