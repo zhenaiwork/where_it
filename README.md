@@ -16,7 +16,7 @@
 
 ### 指令的具体介绍
 
-`/where`查看该指令的`help`信息，`/where it_all`查看服务器
+`/where`查看该指令的`help`信息，`/where it_all`查看服务器建筑&机器坐标
 
 权限要求：无
 
