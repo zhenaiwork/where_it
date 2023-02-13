@@ -16,7 +16,11 @@
 
 ### 指令的具体介绍
 
+<<<<<<< HEAD
 `/where`查看该指令的`help`信息，`/where it_all`查看服务器器建筑&机器坐标
+=======
+`/where`查看该指令的`help`信息，`/where it_all`查看服务器建筑&机器坐标
+>>>>>>> github/master
 
 权限要求：无
 
@@ -30,4 +34,8 @@
 
 `/remove`查看该指令的`help`信息，`/remove last`删除最后一行信息
 
+<<<<<<< HEAD
 权限要求：`op`
+=======
+权限要求：`op`
+>>>>>>> github/master
