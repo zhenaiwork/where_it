@@ -15,16 +15,18 @@ public class makeCommand {
 
         dispatcher.register(literal("make").requires(c -> c.hasPermissionLevel(4))
                 .then(argument("name", StringArgumentType.string())
-                .then(argument("x", IntegerArgumentType.integer())
-                .then(argument("z", IntegerArgumentType.integer())
-                .executes(c -> config.writeconfig(StringArgumentType.getString(c, "name"),
+                        .then(argument("dimension", IntegerArgumentType.integer())
+                        .then(argument("x", IntegerArgumentType.integer())
+                        .then(argument("z", IntegerArgumentType.integer())
+                                .executes(c -> config.writeconfig(StringArgumentType.getString(c, "name"),
+                        IntegerArgumentType.getInteger(c, "dimension"),
                         IntegerArgumentType.getInteger(c, "x"),
                         IntegerArgumentType.getInteger(c, "z"), c.getSource().getPlayer()))
-        ))));
+        )))));
     }
 
     private static int help(PlayerEntity player){
-        player.sendMessage(new LiteralText("make \"name\" x z （下界坐标）"), false);
+        player.sendMessage(new LiteralText("make \"name\" dimension x z \n dimension为维度，00主世界，-1下界，01末地"), false);
         return 0;
     }
 }
