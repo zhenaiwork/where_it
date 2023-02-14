@@ -40,18 +40,4 @@ public class readLine {
         in.close();
         return lines;
     }
-
-    /**
-     * 读取文件指定行。
-     */
-    public static void main(String[] args) throws IOException {
-        // 指定读取的行号w
-        int lineNumber = 2;
-        // 读取文件
-        File sourceFile = new File("D:/java/test.txt");
-        // 读取指定的行
-        readAppointedLineNumber(sourceFile, lineNumber);
-        // 获取文件的内容的总行数
-        System.out.println(getTotalLines(sourceFile));
-    }
 }

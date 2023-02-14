@@ -3,6 +3,7 @@ package work.zhenai.io;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.text.LiteralText;
+import org.lwjgl.system.CallbackI;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -13,19 +14,27 @@ import java.nio.file.StandardOpenOption;
 public class config {
     static String url =  "config/config.yml";
 
-    public static int getconfig(PlayerEntity player){
-        int slot = 0;
-        try {
-            File file = new File(url);
-            int line = readLine.getTotalLines(file);
-            while (slot < line) {
-                slot++;
-                String readSlot = readLine.readAppointedLineNumber(file, slot);
-                player.sendMessage(new LiteralText((readSlot)), false);
-            }
+    public static int getconfig(int i, String name, PlayerEntity player){
+        if (i == 0){
+            int slot = 0;
+            try {
+                player.sendMessage(new LiteralText("---------------服务器所有坐标---------------"), false);
 
-        } catch (IOException e) {
-            player.sendMessage(new LiteralText("获取文件失败 -- IOException"), false);
+                File file = new File(url);
+                int line = readLine.getTotalLines(file);
+                while (slot < line) {
+                    slot++;
+                    String readSlot = readLine.readAppointedLineNumber(file, slot);
+                    player.sendMessage(new LiteralText((readSlot)), false);
+                }
+
+            } catch (IOException e) {
+                player.sendMessage(new LiteralText("获取文件失败 -- IOException"), false);
+            }
+        }
+        if (i == 1){
+            player.sendMessage(new LiteralText("---------------检索到 " + name + " 的相关内容---------------"),false);
+            find.find(name, url, player);
         }
         return 0;
     }
@@ -45,8 +54,6 @@ public class config {
         }else {
             player.sendMessage(new LiteralText("你 make 你妈呢！！！"), false);
         }
-
-
         return 0;
     }
 
@@ -56,6 +63,7 @@ public class config {
             removeLine.remove(url);
             removeLine.remove(url);
             removeLine.remove(url);
+            player.sendMessage(new LiteralText("---------------last已删除---------------"), false);
         } catch (IOException e) {
             player.sendMessage(new LiteralText("删除失败 -- IOException"), false);
         }
@@ -65,6 +73,7 @@ public class config {
 
     private static int write(String write, PlayerEntity player){
         try {
+            player.sendMessage(new LiteralText("---------------添加坐标成功---------------"), false);
             Files.writeString(Paths.get(url), write , StandardOpenOption.APPEND);
         } catch (IOException e) {
             player.sendMessage(new LiteralText("写入失败 -- IOException"), false);
