@@ -41,5 +41,15 @@
       <option name="name" value="LoomLocalMinecraft" />
       <option name="url" value="file:$USER_HOME$/Minecraft%20-%20Fabric/where%20it/.gradle/loom-cache/minecraftMaven/" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="Nyan Maven" />
+      <option name="name" value="Nyan Maven" />
+      <option name="url" value="https://maven.hendrixshen.top" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="CurseForge Maven" />
+      <option name="name" value="CurseForge Maven" />
+      <option name="url" value="https://www.cursemaven.com" />
+    </remote-repository>
   </component>
 </project>

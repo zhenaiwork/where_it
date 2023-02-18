@@ -1,17 +1,10 @@
 package work.zhenai;
 
-import com.mojang.brigadier.CommandDispatcher;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v1.CommandRegistrationCallback;
-import net.minecraft.server.command.ServerCommandSource;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import work.zhenai.commands.whereCommand;
 import work.zhenai.commands.makeCommand;
 import work.zhenai.commands.removecommand;
-import java.io.IOException;
-import java.net.URISyntaxException;
+import work.zhenai.commands.whereCommand;
 
 public class Main implements ModInitializer {
     //public static final Logger LOGGER = LoggerFactory.getLogger("zhenai_");

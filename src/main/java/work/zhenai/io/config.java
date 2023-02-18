@@ -60,9 +60,9 @@ public class config {
 
     public static int remove(PlayerEntity player){
         try {
-            removeLine.remove(url);
-            removeLine.remove(url);
-            removeLine.remove(url);
+            for (int i = 0; i < 3; i++){
+                removeLine.remove(url);
+            }
             player.sendMessage(new LiteralText("---------------last已删除---------------"), false);
         } catch (IOException e) {
             player.sendMessage(new LiteralText("删除失败 -- IOException"), false);
