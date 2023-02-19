@@ -10,9 +10,9 @@
 
 `where_it`是一个服务端`MOD`，对于客户端搭配  [Oh My MineCraft Client](https://github.com/plusls/oh-my-minecraft-client)  食用效果最佳。
 
-服务端需要服主把`where_it.jar`放到`mods`文件夹里，之后在`config`文件夹里创建`config.yml`文件，需要注意的是，在这之后需要更新`fabricloader>=0.14.10`。
+服务端需要服主把`where_it.jar`放到`mods`文件夹里，之后在`config`文件夹里创建`config.yml`文件 (第一行要随便写点什么) ，需要注意的是 在这之后需要更新`fabricloader>=0.14.10`。
 
-目前`where_it`只支持以下版本，需要其他的版本请自行编译。
+目前`where_it`只支持以下版本 (除`1.18.2`其他的都没有测试) ，需要其他的版本请自行编译。
 
 `1.18.2`, `1.17.1` ,`1.16.5`, `1.15.2`, `1.14.4`
 
